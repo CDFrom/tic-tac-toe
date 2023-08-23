@@ -8,6 +8,10 @@
   width: 100%;
 }
 
+.cell:hover {
+  cursor: pointer;
+}
+
 @media (min-width: 20rem) {
   .cell {
     font-size: 4rem;
