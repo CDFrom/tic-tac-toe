@@ -1,0 +1,24 @@
+.board {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 90vw;
+  max-width: 20rem;
+  height: 90vw;
+  max-height: 20rem;
+  margin: 10rem auto;
+}
+
+.top,
+.middle,
+.bottom {
+  border: solid 2px black;
+}
+
+.top {
+  border-top: none;
+}
+
+.bottom {
+  border-bottom: none;
+}
