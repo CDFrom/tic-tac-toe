@@ -9,16 +9,13 @@ const Board = () => {
   const gameContext = useContext(GameContext);
 
   useEffect(() => {
-    let inputPlayer1 = null;
-    let inputPlayer2 = null;
+    const inputPlayer1 = prompt("Player 1 name:");
+    const inputPlayer2 = prompt("Player 2 name:");
 
-    while (inputPlayer1 === null || inputPlayer2 === null) {
-      inputPlayer1 = prompt("Player 1 name:");
-      inputPlayer2 = prompt("Player 2 name:");
-    }
-
-    const player1 = inputPlayer1.trim() === "" ? "Player 1" : inputPlayer1;
-    const player2 = inputPlayer2.trim() === "" ? "Player 2" : inputPlayer2;
+    const player1 =
+      inputPlayer1.trim() === ("" || null) ? "Player 1" : inputPlayer1;
+    const player2 =
+      inputPlayer2.trim() === ("" || null) ? "Player 2" : inputPlayer2;
     gameContext.setNames(player1, player2);
   }, []);
 
