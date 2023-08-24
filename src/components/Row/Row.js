@@ -5,9 +5,15 @@ import classes from "./Row.module.css";
 const Row = (props) => {
   return (
     <div className={classes.row}>
-      <Cell className={`${props.className} ${classes.first}`} />
-      <Cell className={props.className} />
-      <Cell className={`${props.className} ${classes.third}`} />
+      <Cell
+        className={`${props.className} ${classes.first}`}
+        cellNumber={props.rowNumber + "0"}
+      />
+      <Cell className={props.className} cellNumber={props.rowNumber + "1"} />
+      <Cell
+        className={`${props.className} ${classes.third}`}
+        cellNumber={props.rowNumber + "2"}
+      />
     </div>
   );
 };
